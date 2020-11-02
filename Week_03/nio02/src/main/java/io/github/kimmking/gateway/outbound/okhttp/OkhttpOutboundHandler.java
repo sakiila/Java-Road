@@ -7,6 +7,8 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.DefaultFullHttpResponse;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.FullHttpResponse;
+import io.netty.handler.codec.http.HttpHeaders;
+import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -15,8 +17,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 import static io.netty.handler.codec.http.HttpResponseStatus.OK;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
@@ -48,12 +52,19 @@ public class OkhttpOutboundHandler extends OutboundHander {
         final String url = route + fullRequest.uri();
         logger.info("url: {}", url);
 
+        // 转换Header类型
+        HttpHeaders headers = fullRequest.headers();
+        Map<String, String> collect = headers.entries().stream()
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        Headers newHeaders = Headers.of(collect).newBuilder().build();
+
         FullHttpResponse result = null;
 
-        Request request = new Request.Builder().url(url).build();
+        Request request = new Request.Builder().url(url).headers(newHeaders).build();
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) {
                 // ... handle failed request
+                throw new IOException();
             }
 
             String responseBody = response.body().string();
