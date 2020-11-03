@@ -12,7 +12,7 @@ public class HttpInboundInitializer extends ChannelInitializer<SocketChannel> {
 
     private List<String> proxyServer;
 
-    public  HttpInboundInitializer(List<String> proxyServer) {
+    public HttpInboundInitializer(List<String> proxyServer) {
         this.proxyServer = proxyServer;
     }
 

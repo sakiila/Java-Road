@@ -1,20 +1,17 @@
 package io.github.kimmking.gateway.inbound;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
-import io.github.kimmking.gateway.outbound.LoadBalance;
 import io.github.kimmking.gateway.outbound.OutboundHander;
-import io.github.kimmking.gateway.outbound.okhttp.OkhttpOutboundHandler;
+import io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.util.ReferenceCountUtil;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
+@Slf4j
 public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
-
-    private static Logger logger = LoggerFactory.getLogger(HttpInboundHandler.class);
 
     private final List<String> proxyServers;
 
@@ -22,8 +19,9 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
 
     public HttpInboundHandler(List<String> proxyServers) {
         this.proxyServers = proxyServers;
-        // 可以使用的有：HttpOutboundHandler、OkhttpOutboundHandler
-        handler = new OkhttpOutboundHandler(proxyServers);
+        // 可以使用的有：HttpClientOutboundHandler、OkhttpOutboundHandler
+//        handler = new HttpClientOutboundHandler(proxyServers);
+        handler = new NettyHttpClientOutboundHandler(proxyServers);
     }
 
     @Override
@@ -44,10 +42,10 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
 //            }
 
             // filter
-            handler.filter(fullRequest, ctx);
+            handler.filter(ctx, fullRequest);
 
             // handle
-            handler.handle(fullRequest, ctx);
+            handler.handle(ctx, fullRequest);
 
         } catch (Exception e) {
             e.printStackTrace();

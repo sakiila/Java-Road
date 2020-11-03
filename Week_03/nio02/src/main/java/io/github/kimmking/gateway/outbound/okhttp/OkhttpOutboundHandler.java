@@ -8,12 +8,11 @@ import io.netty.handler.codec.http.DefaultFullHttpResponse;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.HttpHeaders;
+import lombok.extern.slf4j.Slf4j;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.List;
@@ -25,15 +24,14 @@ import java.util.stream.Collectors;
 import static io.netty.handler.codec.http.HttpResponseStatus.OK;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
-public class OkhttpOutboundHandler extends OutboundHander {
-
-    private static Logger logger = LoggerFactory.getLogger(OkhttpOutboundHandler.class);
+@Slf4j
+public class OkhttpOutboundHandler implements OutboundHander {
 
     private OkHttpClient client;
 
     private List<String> backendUrls;
 
-    public static int number = 0;
+    private static int number = 0;
 
     public OkhttpOutboundHandler(List<String> backendUrls) {
         this.backendUrls = backendUrls;
@@ -45,12 +43,12 @@ public class OkhttpOutboundHandler extends OutboundHander {
     }
 
     @Override
-    public void handle(final FullHttpRequest fullRequest, final ChannelHandlerContext ctx) {
+    public void handle(final ChannelHandlerContext ctx, final FullHttpRequest fullRequest) {
         // route
         // 可选的负载策略有：RANDOM、ROUND_ROBIN
         String route = route(backendUrls, LoadBalance.ROUND_ROBIN);
         final String url = route + fullRequest.uri();
-        logger.info("url: {}", url);
+        log.info("url: {}", url);
 
         // 转换Header类型
         HttpHeaders headers = fullRequest.headers();
@@ -69,7 +67,6 @@ public class OkhttpOutboundHandler extends OutboundHander {
 
             String responseBody = response.body().string();
             responseBody = responseBody + "\nServer Url: " + request.url();
-//            logger.info("responseBody: {}", responseBody);
 
             // ... do something with response
             byte[] body = responseBody.getBytes();
@@ -88,7 +85,7 @@ public class OkhttpOutboundHandler extends OutboundHander {
     }
 
     @Override
-    public void filter(FullHttpRequest fullRequest, ChannelHandlerContext ctx) {
+    public void filter(ChannelHandlerContext ctx, FullHttpRequest fullRequest) {
 //        System.out.println("============== start filter ==============");
 //        System.out.println("============== before filter ==============");
 //        System.out.println("fullRequest.headers() = " + fullRequest.headers());
@@ -96,9 +93,7 @@ public class OkhttpOutboundHandler extends OutboundHander {
 //        System.out.println("fullRequest.content() = " + fullRequest.content());
 //        System.out.println("fullRequest.method() = " + fullRequest.method());
 
-        fullRequest.headers().add("user-name", "sakila");
-        fullRequest.headers().add("user-sex", "male");
-        fullRequest.headers().add("user-age", "23");
+        fullRequest.headers().add("nio", "sakila");
 
 //        System.out.println("============== after filter ==============");
 //        System.out.println("fullRequest.headers() = " + fullRequest.headers());
@@ -106,8 +101,6 @@ public class OkhttpOutboundHandler extends OutboundHander {
 //        System.out.println("fullRequest.content() = " + fullRequest.content());
 //        System.out.println("fullRequest.method() = " + fullRequest.method());
 //        System.out.println("============== end filter ==============");
-
-        return;
     }
 
     @Override

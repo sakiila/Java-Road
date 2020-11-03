@@ -28,13 +28,15 @@ import static io.netty.handler.codec.http.HttpResponseStatus.NO_CONTENT;
 import static io.netty.handler.codec.http.HttpResponseStatus.OK;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
-public class HttpOutboundHandler extends OutboundHander {
+public class HttpClientOutboundHandler implements OutboundHander {
 
     private CloseableHttpAsyncClient httpclient;
+
     private ExecutorService proxyService;
+
     private String backendUrl;
 
-    public HttpOutboundHandler(String backendUrl) {
+    public HttpClientOutboundHandler(String backendUrl) {
         this.backendUrl = backendUrl.endsWith("/") ? backendUrl.substring(0, backendUrl.length() - 1) : backendUrl;
         int cores = Runtime.getRuntime().availableProcessors() * 2;
         long keepAliveTime = 1000;
@@ -60,7 +62,7 @@ public class HttpOutboundHandler extends OutboundHander {
     }
 
     @Override
-    public void handle(final FullHttpRequest fullRequest, final ChannelHandlerContext ctx) {
+    public void handle(final ChannelHandlerContext ctx, final FullHttpRequest fullRequest) {
         final String url = this.backendUrl + fullRequest.uri();
         proxyService.submit(() -> fetchGet(fullRequest, ctx, url));
     }

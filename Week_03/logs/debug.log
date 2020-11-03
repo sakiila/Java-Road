@@ -1,0 +1,928 @@
+2020-11-03 10:56:56,028 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功
+2020-11-03 10:57:54,410 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，url：127.0.0.18808
+2020-11-03 10:58:17,920 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 10:59:46,635 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 11:18:55,998 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x5eedfece]'
+2020-11-03 11:18:56,000 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x5eedfece]'
+2020-11-03 11:18:56,002 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x5eedfece]'
+2020-11-03 11:18:56,002 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x5eedfece]'
+2020-11-03 11:18:56,014 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x5eedfece] REGISTERED
+2020-11-03 11:18:56,015 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x5eedfece] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 11:18:56,016 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x5eedfece, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 11:19:09,396 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x5eedfece, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x42159f2b, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:6520]
+2020-11-03 11:19:09,397 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x5eedfece, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:19:09,729 [INFO ] (io.github.kimmking.gateway.outbound.okhttp.OkhttpOutboundHandler.nioEventLoopGroup-3-1): url: http://localhost:8808/
+2020-11-03 11:19:27,331 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-3-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 11:19:30,172 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x5eedfece, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xb26b17da, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:6525]
+2020-11-03 11:19:30,172 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x5eedfece, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:19:30,180 [INFO ] (io.github.kimmking.gateway.outbound.okhttp.OkhttpOutboundHandler.nioEventLoopGroup-3-2): url: http://localhost:8808/test
+2020-11-03 11:20:14,766 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0xeb1cc8f0]'
+2020-11-03 11:20:14,767 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0xeb1cc8f0]'
+2020-11-03 11:20:14,769 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0xeb1cc8f0]'
+2020-11-03 11:20:14,769 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xeb1cc8f0]'
+2020-11-03 11:20:14,780 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xeb1cc8f0] REGISTERED
+2020-11-03 11:20:14,781 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xeb1cc8f0] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 11:20:14,782 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xeb1cc8f0, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 11:20:19,154 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xeb1cc8f0, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x9f7eba1b, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:6580]
+2020-11-03 11:20:19,155 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xeb1cc8f0, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:20:19,215 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 11:31:46,386 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x7d32db7d]'
+2020-11-03 11:31:46,387 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x7d32db7d]'
+2020-11-03 11:31:46,389 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x7d32db7d]'
+2020-11-03 11:31:46,389 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x7d32db7d]'
+2020-11-03 11:31:46,401 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7d32db7d] REGISTERED
+2020-11-03 11:31:46,402 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7d32db7d] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 11:31:46,404 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7d32db7d, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 11:31:49,833 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7d32db7d, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x98fc43ec, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:6810]
+2020-11-03 11:31:49,833 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7d32db7d, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:31:49,892 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): channelActive
+2020-11-03 11:31:49,892 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 11:36:08,695 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x854555f4]'
+2020-11-03 11:36:08,697 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x854555f4]'
+2020-11-03 11:36:08,698 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x854555f4]'
+2020-11-03 11:36:08,698 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x854555f4]'
+2020-11-03 11:36:08,709 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x854555f4] REGISTERED
+2020-11-03 11:36:08,710 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x854555f4] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 11:36:08,711 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x854555f4, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 11:36:14,898 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x854555f4, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x6e6f2b27, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:6926]
+2020-11-03 11:36:14,899 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x854555f4, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:36:14,963 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): channelActive
+2020-11-03 11:36:14,963 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 11:37:43,407 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0xaea9f3c4]'
+2020-11-03 11:37:43,408 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0xaea9f3c4]'
+2020-11-03 11:37:43,409 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0xaea9f3c4]'
+2020-11-03 11:37:43,410 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xaea9f3c4]'
+2020-11-03 11:37:43,420 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xaea9f3c4] REGISTERED
+2020-11-03 11:37:43,421 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xaea9f3c4] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 11:37:43,422 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xaea9f3c4, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 11:37:44,939 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xaea9f3c4, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x5a699ba7, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:7012]
+2020-11-03 11:37:44,940 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xaea9f3c4, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:42:40,803 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x2d2906e1]'
+2020-11-03 11:42:40,804 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x2d2906e1]'
+2020-11-03 11:42:40,805 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x2d2906e1]'
+2020-11-03 11:42:40,805 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x2d2906e1]'
+2020-11-03 11:42:40,816 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2d2906e1] REGISTERED
+2020-11-03 11:42:40,817 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2d2906e1] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 11:42:40,818 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2d2906e1, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 11:42:47,053 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2d2906e1, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xbc6200cc, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:7175]
+2020-11-03 11:42:47,054 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2d2906e1, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:43:00,730 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x8490fa67]'
+2020-11-03 11:43:00,731 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x8490fa67]'
+2020-11-03 11:43:00,733 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x8490fa67]'
+2020-11-03 11:43:00,733 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x8490fa67]'
+2020-11-03 11:43:00,743 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8490fa67] REGISTERED
+2020-11-03 11:43:00,744 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8490fa67] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 11:43:00,745 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8490fa67, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 11:43:07,815 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8490fa67, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xcae3f071, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:7246]
+2020-11-03 11:43:07,816 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8490fa67, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:43:07,878 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): channelActive
+2020-11-03 11:43:07,878 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 11:45:26,469 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x9ffd0272]'
+2020-11-03 11:45:26,471 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x9ffd0272]'
+2020-11-03 11:45:26,472 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x9ffd0272]'
+2020-11-03 11:45:26,472 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x9ffd0272]'
+2020-11-03 11:45:26,483 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9ffd0272] REGISTERED
+2020-11-03 11:45:26,485 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9ffd0272] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 11:45:26,486 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9ffd0272, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 11:45:35,400 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9ffd0272, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xf133ea62, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:7359]
+2020-11-03 11:45:35,401 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9ffd0272, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 11:45:35,463 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): channelActive
+2020-11-03 11:45:35,463 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 12:02:16,480 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-2-1): channelActive
+2020-11-03 12:02:16,480 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 12:10:09,079 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-2-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:10:32,353 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-2-1): channelActive
+2020-11-03 12:10:32,353 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 12:12:02,245 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-2-1): channelActive
+2020-11-03 12:12:02,255 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 12:14:04,515 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-2-1): channelActive
+2020-11-03 12:14:04,515 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 12:14:11,932 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-2-1): channelActive
+2020-11-03 12:14:11,932 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 12:15:20,852 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-2-1): channelActive
+2020-11-03 12:15:20,852 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.main): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 12:15:26,447 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x102e7bd0]'
+2020-11-03 12:15:26,447 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x102e7bd0]'
+2020-11-03 12:15:26,447 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x102e7bd0]'
+2020-11-03 12:15:26,447 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x102e7bd0]'
+2020-11-03 12:15:26,463 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0] REGISTERED
+2020-11-03 12:15:26,463 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 12:15:26,463 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 12:15:43,049 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xebb1f1a1, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:3680]
+2020-11-03 12:15:43,049 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 12:15:43,112 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): channelActive
+2020-11-03 12:15:43,112 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 12:16:07,699 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x9caa0883, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:3708]
+2020-11-03 12:16:07,699 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 12:16:07,715 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-5-1): channelActive
+2020-11-03 12:16:07,715 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-2): 连接服务器成功，host：localhost，port：8808
+2020-11-03 12:16:13,392 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x12e91123, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:3736]
+2020-11-03 12:16:13,392 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 12:16:13,408 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-6-1): channelActive
+2020-11-03 12:16:13,408 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-3): 连接服务器成功，host：localhost，port：8808
+2020-11-03 12:16:17,863 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-4-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:16:17,863 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-5-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:16:17,863 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-6-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:16:17,863 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-3-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:16:17,863 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-3-2): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:16:26,684 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-3-3): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:16:31,107 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x4842a703, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:5780]
+2020-11-03 12:16:31,107 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x102e7bd0, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 12:16:31,122 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-7-1): channelActive
+2020-11-03 12:16:31,122 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-4): 连接服务器成功，host：localhost，port：8808
+2020-11-03 16:30:44,687 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x452815ea]'
+2020-11-03 16:30:44,689 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x452815ea]'
+2020-11-03 16:30:44,691 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x452815ea]'
+2020-11-03 16:30:44,691 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x452815ea]'
+2020-11-03 16:30:44,710 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x452815ea] REGISTERED
+2020-11-03 16:30:44,711 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x452815ea] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 16:30:44,713 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x452815ea, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 16:31:17,044 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x452815ea, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xeff4029c, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:8455]
+2020-11-03 16:31:17,046 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x452815ea, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 16:31:17,117 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x12510bcb] REGISTERED
+2020-11-03 16:31:17,117 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x12510bcb] CONNECT: localhost/127.0.0.1:8808
+2020-11-03 16:31:17,119 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): channelActive
+2020-11-03 16:31:17,119 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 16:32:06,095 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x2aecdcf6]'
+2020-11-03 16:32:06,097 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x2aecdcf6]'
+2020-11-03 16:32:06,098 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x2aecdcf6]'
+2020-11-03 16:32:06,098 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x2aecdcf6]'
+2020-11-03 16:32:06,110 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2aecdcf6] REGISTERED
+2020-11-03 16:32:06,111 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2aecdcf6] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 16:32:06,112 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2aecdcf6, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 16:32:37,605 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2aecdcf6, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xb6706c1e, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:8552]
+2020-11-03 16:32:37,606 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2aecdcf6, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 16:32:37,669 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x2e50883b] REGISTERED
+2020-11-03 16:32:37,669 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x2e50883b] CONNECT: localhost/127.0.0.1:8808
+2020-11-03 16:32:37,671 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): channelActive
+2020-11-03 16:32:37,671 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 16:32:37,672 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x2e50883b, L:/127.0.0.1:8577 - R:localhost/127.0.0.1:8808] WRITE: 22B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| e4 bd a0 e5 a5 bd ef bc 8c 63 68 61 6e 6e 65 6c |.........channel|
+|00000010| 41 63 74 69 76 65                               |Active          |
++--------+-------------------------------------------------+----------------+
+2020-11-03 16:32:37,672 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x2e50883b, L:/127.0.0.1:8577 - R:localhost/127.0.0.1:8808] FLUSH
+2020-11-03 16:33:43,268 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x2e50883b, L:/127.0.0.1:8577 - R:localhost/127.0.0.1:8808] READ COMPLETE
+2020-11-03 16:33:43,270 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x2e50883b, L:/127.0.0.1:8577 - R:localhost/127.0.0.1:8808] EXCEPTION: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:33:43,271 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-4-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:33:43,272 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x2e50883b, L:/127.0.0.1:8577 ! R:localhost/127.0.0.1:8808] INACTIVE
+2020-11-03 16:33:43,272 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x2e50883b, L:/127.0.0.1:8577 ! R:localhost/127.0.0.1:8808] UNREGISTERED
+2020-11-03 16:33:55,034 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-3-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:33:57,594 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2aecdcf6, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x293a769e, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:10615]
+2020-11-03 16:33:57,594 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x2aecdcf6, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 16:33:57,610 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-5-1): [id: 0x28e0d3a0] REGISTERED
+2020-11-03 16:33:57,610 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-5-1): [id: 0x28e0d3a0] CONNECT: localhost/127.0.0.1:8808
+2020-11-03 16:33:57,610 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-5-1): channelActive
+2020-11-03 16:33:57,610 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-2): 连接服务器成功，host：localhost，port：8808
+2020-11-03 16:33:57,611 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-5-1): [id: 0x28e0d3a0, L:/127.0.0.1:10640 - R:localhost/127.0.0.1:8808] WRITE: 22B
+         +-------------------------------------------------+
+         |  0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f |
++--------+-------------------------------------------------+----------------+
+|00000000| e4 bd a0 e5 a5 bd ef bc 8c 63 68 61 6e 6e 65 6c |.........channel|
+|00000010| 41 63 74 69 76 65                               |Active          |
++--------+-------------------------------------------------+----------------+
+2020-11-03 16:33:57,611 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-5-1): [id: 0x28e0d3a0, L:/127.0.0.1:10640 - R:localhost/127.0.0.1:8808] FLUSH
+2020-11-03 16:43:08,689 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-5-1): [id: 0x28e0d3a0, L:/127.0.0.1:10640 - R:localhost/127.0.0.1:8808] READ COMPLETE
+2020-11-03 16:43:08,689 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-5-1): [id: 0x28e0d3a0, L:/127.0.0.1:10640 - R:localhost/127.0.0.1:8808] EXCEPTION: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:43:08,690 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-5-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:43:08,690 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-5-1): [id: 0x28e0d3a0, L:/127.0.0.1:10640 ! R:localhost/127.0.0.1:8808] INACTIVE
+2020-11-03 16:43:08,690 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-5-1): [id: 0x28e0d3a0, L:/127.0.0.1:10640 ! R:localhost/127.0.0.1:8808] UNREGISTERED
+2020-11-03 16:43:08,696 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-3-2): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:43:20,153 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x89f6e090]'
+2020-11-03 16:43:20,155 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x89f6e090]'
+2020-11-03 16:43:20,157 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x89f6e090]'
+2020-11-03 16:43:20,157 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x89f6e090]'
+2020-11-03 16:43:20,170 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x89f6e090] REGISTERED
+2020-11-03 16:43:20,172 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x89f6e090] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 16:43:20,173 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x89f6e090, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 16:43:26,222 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x89f6e090, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x1099e090, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:12897]
+2020-11-03 16:43:26,223 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x89f6e090, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 16:43:26,283 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf05950d5] REGISTERED
+2020-11-03 16:43:26,283 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf05950d5] CONNECT: localhost/127.0.0.1:8808
+2020-11-03 16:43:26,284 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): channelActive
+2020-11-03 16:43:26,284 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：localhost，port：8808
+2020-11-03 16:43:26,285 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf05950d5, L:/127.0.0.1:12922 - R:localhost/127.0.0.1:8808] EXCEPTION: java.lang.NullPointerException: msg
+java.lang.NullPointerException: msg
+	at io.netty.util.internal.ObjectUtil.checkNotNull(ObjectUtil.java:33)
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:770)
+	at io.netty.channel.AbstractChannelHandlerContext.writeAndFlush(AbstractChannelHandlerContext.java:756)
+	at io.netty.channel.AbstractChannelHandlerContext.writeAndFlush(AbstractChannelHandlerContext.java:806)
+	at io.netty.channel.DefaultChannelPipeline.writeAndFlush(DefaultChannelPipeline.java:1025)
+	at io.netty.channel.AbstractChannel.writeAndFlush(AbstractChannel.java:294)
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelActive(NettyHttpClientOutboundHandler.java:46)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:228)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:214)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:207)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelActive(DefaultChannelPipeline.java:1398)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:228)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:214)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:895)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:305)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:335)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:43:26,286 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-4-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.NullPointerException: msg
+	at io.netty.util.internal.ObjectUtil.checkNotNull(ObjectUtil.java:33)
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:770)
+	at io.netty.channel.AbstractChannelHandlerContext.writeAndFlush(AbstractChannelHandlerContext.java:756)
+	at io.netty.channel.AbstractChannelHandlerContext.writeAndFlush(AbstractChannelHandlerContext.java:806)
+	at io.netty.channel.DefaultChannelPipeline.writeAndFlush(DefaultChannelPipeline.java:1025)
+	at io.netty.channel.AbstractChannel.writeAndFlush(AbstractChannel.java:294)
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelActive(NettyHttpClientOutboundHandler.java:46)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:228)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:214)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelActive(AbstractChannelHandlerContext.java:207)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelActive(DefaultChannelPipeline.java:1398)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:228)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelActive(AbstractChannelHandlerContext.java:214)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelActive(DefaultChannelPipeline.java:895)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:305)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:335)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:57:07,639 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x8f36fd29]'
+2020-11-03 16:57:07,640 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x8f36fd29]'
+2020-11-03 16:57:07,641 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x8f36fd29]'
+2020-11-03 16:57:07,641 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x8f36fd29]'
+2020-11-03 16:57:07,652 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8f36fd29] REGISTERED
+2020-11-03 16:57:07,653 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8f36fd29] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 16:57:07,654 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8f36fd29, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 16:57:16,929 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8f36fd29, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x2fdc3f74, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:13234]
+2020-11-03 16:57:16,930 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x8f36fd29, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 16:57:16,991 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x16c94808] REGISTERED
+2020-11-03 16:57:16,991 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x16c94808] CONNECT: /127.0.0.1:8808
+2020-11-03 16:57:16,992 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x16c94808, L:/127.0.0.1:13259 - R:/127.0.0.1:8808] ACTIVE
+2020-11-03 16:57:16,992 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 16:57:50,356 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x4d782c30]'
+2020-11-03 16:57:50,357 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x4d782c30]'
+2020-11-03 16:57:50,359 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x4d782c30]'
+2020-11-03 16:57:50,359 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x4d782c30]'
+2020-11-03 16:57:50,369 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x4d782c30] REGISTERED
+2020-11-03 16:57:50,370 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x4d782c30] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 16:57:50,372 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x4d782c30, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 16:58:00,509 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x4d782c30, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x70512845, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:1361]
+2020-11-03 16:58:00,510 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x4d782c30, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 16:58:00,570 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3157ec07] REGISTERED
+2020-11-03 16:58:00,571 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3157ec07] CONNECT: /127.0.0.1:8808
+2020-11-03 16:58:00,572 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3157ec07, L:/127.0.0.1:1386 - R:/127.0.0.1:8808] ACTIVE
+2020-11-03 16:58:00,572 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 16:59:47,889 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x9b4134b4]'
+2020-11-03 16:59:47,890 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x9b4134b4]'
+2020-11-03 16:59:47,892 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x9b4134b4]'
+2020-11-03 16:59:47,892 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x9b4134b4]'
+2020-11-03 16:59:47,902 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9b4134b4] REGISTERED
+2020-11-03 16:59:47,903 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9b4134b4] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 16:59:47,905 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9b4134b4, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 16:59:51,586 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9b4134b4, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x5bef3cba, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:1459]
+2020-11-03 16:59:51,588 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x9b4134b4, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 16:59:51,648 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xa2d091a2] REGISTERED
+2020-11-03 16:59:51,648 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xa2d091a2] CONNECT: /127.0.0.1:8808
+2020-11-03 16:59:51,649 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xa2d091a2, L:/127.0.0.1:1484 - R:/127.0.0.1:8808] ACTIVE
+2020-11-03 16:59:51,649 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClient.nioEventLoopGroup-3-1): 连接服务器成功，host：127.0.0.1，port：8808
+2020-11-03 16:59:51,652 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xa2d091a2, L:/127.0.0.1:1484 - R:/127.0.0.1:8808] WRITE, HttpObjectAggregator$AggregatedFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: CompositeByteBuf(ridx: 0, widx: 0, cap: 0, components=0))
+GET /test HTTP/1.1
+Host: localhost:8888
+User-Agent: curl/7.55.1
+Accept: */*
+content-length: 0
+nio: sakila, 0B
+2020-11-03 16:59:51,654 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xa2d091a2, L:/127.0.0.1:1484 - R:/127.0.0.1:8808] FLUSH
+2020-11-03 16:59:51,664 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xa2d091a2, L:/127.0.0.1:1484 - R:/127.0.0.1:8808] EXCEPTION: java.lang.ClassCastException: io.netty.handler.codec.http.DefaultHttpResponse cannot be cast to io.netty.handler.codec.http.FullHttpResponse
+java.lang.ClassCastException: io.netty.handler.codec.http.DefaultHttpResponse cannot be cast to io.netty.handler.codec.http.FullHttpResponse
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelRead(NettyHttpClientOutboundHandler.java:50)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:308)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:422)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:59:51,666 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-4-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.ClassCastException: io.netty.handler.codec.http.DefaultHttpResponse cannot be cast to io.netty.handler.codec.http.FullHttpResponse
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelRead(NettyHttpClientOutboundHandler.java:50)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:308)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:422)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:59:51,670 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xa2d091a2, L:/127.0.0.1:1484 - R:/127.0.0.1:8808] EXCEPTION: java.lang.ClassCastException: io.netty.handler.codec.http.DefaultLastHttpContent cannot be cast to io.netty.handler.codec.http.FullHttpResponse
+java.lang.ClassCastException: io.netty.handler.codec.http.DefaultLastHttpContent cannot be cast to io.netty.handler.codec.http.FullHttpResponse
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelRead(NettyHttpClientOutboundHandler.java:50)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:295)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:59:51,670 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-4-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.ClassCastException: io.netty.handler.codec.http.DefaultLastHttpContent cannot be cast to io.netty.handler.codec.http.FullHttpResponse
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelRead(NettyHttpClientOutboundHandler.java:50)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:295)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 16:59:51,670 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xa2d091a2, L:/127.0.0.1:1484 - R:/127.0.0.1:8808] READ COMPLETE
+2020-11-03 17:06:11,448 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x7644588d]'
+2020-11-03 17:06:11,449 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x7644588d]'
+2020-11-03 17:06:11,451 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x7644588d]'
+2020-11-03 17:06:11,451 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x7644588d]'
+2020-11-03 17:06:11,462 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7644588d] REGISTERED
+2020-11-03 17:06:11,462 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7644588d] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 17:06:11,464 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7644588d, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 17:06:19,169 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7644588d, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x09f64cf2, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:1686]
+2020-11-03 17:06:19,170 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x7644588d, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 17:06:19,229 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3a244b7b] REGISTERED
+2020-11-03 17:06:19,230 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3a244b7b] CONNECT: /127.0.0.1:8808
+2020-11-03 17:06:19,231 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3a244b7b, L:/127.0.0.1:1711 - R:/127.0.0.1:8808] ACTIVE
+2020-11-03 17:06:19,233 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3a244b7b, L:/127.0.0.1:1711 - R:/127.0.0.1:8808] WRITE, HttpObjectAggregator$AggregatedFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: CompositeByteBuf(ridx: 0, widx: 0, cap: 0, components=0))
+GET /test HTTP/1.1
+Host: localhost:8888
+User-Agent: curl/7.55.1
+Accept: */*
+content-length: 0
+nio: sakila, 0B
+2020-11-03 17:06:19,235 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3a244b7b, L:/127.0.0.1:1711 - R:/127.0.0.1:8808] FLUSH
+2020-11-03 17:06:19,237 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): msg：DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 14
+connection: keep-alive
+2020-11-03 17:06:19,237 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): msg：DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 14
+connection: keep-alive
+2020-11-03 17:06:19,240 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3a244b7b, L:/127.0.0.1:1711 - R:/127.0.0.1:8808] EXCEPTION: java.lang.ClassCastException: io.netty.handler.codec.http.DefaultLastHttpContent cannot be cast to io.netty.handler.codec.http.DefaultHttpResponse
+java.lang.ClassCastException: io.netty.handler.codec.http.DefaultLastHttpContent cannot be cast to io.netty.handler.codec.http.DefaultHttpResponse
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelRead(NettyHttpClientOutboundHandler.java:51)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:295)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 17:06:19,241 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-4-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.ClassCastException: io.netty.handler.codec.http.DefaultLastHttpContent cannot be cast to io.netty.handler.codec.http.DefaultHttpResponse
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelRead(NettyHttpClientOutboundHandler.java:51)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:295)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 17:06:19,242 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x3a244b7b, L:/127.0.0.1:1711 - R:/127.0.0.1:8808] READ COMPLETE
+2020-11-03 17:11:37,831 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0x56a9734e]'
+2020-11-03 17:11:37,834 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0x56a9734e]'
+2020-11-03 17:11:37,835 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0x56a9734e]'
+2020-11-03 17:11:37,835 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x56a9734e]'
+2020-11-03 17:11:37,847 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x56a9734e] REGISTERED
+2020-11-03 17:11:37,849 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x56a9734e] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 17:11:37,850 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x56a9734e, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 17:11:42,257 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x56a9734e, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x80b3dd78, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:1867]
+2020-11-03 17:11:42,258 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0x56a9734e, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 17:11:42,317 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x1c94b843] REGISTERED
+2020-11-03 17:11:42,317 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x1c94b843] CONNECT: /127.0.0.1:8808
+2020-11-03 17:11:42,319 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x1c94b843, L:/127.0.0.1:1892 - R:/127.0.0.1:8808] ACTIVE
+2020-11-03 17:11:42,321 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x1c94b843, L:/127.0.0.1:1892 - R:/127.0.0.1:8808] WRITE, HttpObjectAggregator$AggregatedFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: CompositeByteBuf(ridx: 0, widx: 0, cap: 0, components=0))
+GET /test HTTP/1.1
+Host: localhost:8888
+User-Agent: curl/7.55.1
+Accept: */*
+content-length: 0
+nio: sakila, 0B
+2020-11-03 17:11:42,322 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x1c94b843, L:/127.0.0.1:1892 - R:/127.0.0.1:8808] FLUSH
+2020-11-03 17:11:42,325 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x1c94b843, L:/127.0.0.1:1892 - R:/127.0.0.1:8808] EXCEPTION: java.lang.ClassCastException: io.netty.handler.codec.http.DefaultHttpResponse cannot be cast to io.netty.handler.codec.http.DefaultLastHttpContent
+java.lang.ClassCastException: io.netty.handler.codec.http.DefaultHttpResponse cannot be cast to io.netty.handler.codec.http.DefaultLastHttpContent
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelRead(NettyHttpClientOutboundHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:308)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:422)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 17:11:42,326 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-4-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.lang.ClassCastException: io.netty.handler.codec.http.DefaultHttpResponse cannot be cast to io.netty.handler.codec.http.DefaultLastHttpContent
+	at io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.channelRead(NettyHttpClientOutboundHandler.java:52)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:308)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:422)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 17:11:42,329 [INFO ] (io.github.kimmking.gateway.outbound.netty4.NettyHttpClientOutboundHandler.nioEventLoopGroup-4-1): msg：DefaultLastHttpContent(data: PooledSlicedByteBuf(ridx: 0, widx: 14, cap: 14/14, unwrapped: PooledUnsafeDirectByteBuf(ridx: 109, widx: 109, cap: 1024)), decoderResult: success)
+2020-11-03 17:11:42,329 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x1c94b843, L:/127.0.0.1:1892 - R:/127.0.0.1:8808] READ COMPLETE
+2020-11-03 17:16:12,003 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0xbc43a533]'
+2020-11-03 17:16:12,004 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0xbc43a533]'
+2020-11-03 17:16:12,006 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0xbc43a533]'
+2020-11-03 17:16:12,006 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xbc43a533]'
+2020-11-03 17:16:12,016 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xbc43a533] REGISTERED
+2020-11-03 17:16:12,017 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xbc43a533] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 17:16:12,018 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xbc43a533, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 17:16:15,886 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xbc43a533, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0x803688cd, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:2059]
+2020-11-03 17:16:15,887 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xbc43a533, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 17:16:15,949 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9] REGISTERED
+2020-11-03 17:16:15,949 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9] CONNECT: /127.0.0.1:8808
+2020-11-03 17:16:15,951 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9, L:/127.0.0.1:2084 - R:/127.0.0.1:8808] ACTIVE
+2020-11-03 17:16:15,953 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9, L:/127.0.0.1:2084 - R:/127.0.0.1:8808] WRITE, HttpObjectAggregator$AggregatedFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: CompositeByteBuf(ridx: 0, widx: 0, cap: 0, components=0))
+GET /test HTTP/1.1
+Host: localhost:8888
+User-Agent: curl/7.55.1
+Accept: */*
+content-length: 0
+nio: sakila, 0B
+2020-11-03 17:16:15,954 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9, L:/127.0.0.1:2084 - R:/127.0.0.1:8808] FLUSH
+2020-11-03 17:16:15,960 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9, L:/127.0.0.1:2084 - R:/127.0.0.1:8808] CLOSE
+2020-11-03 17:16:15,960 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9, L:/127.0.0.1:2084 ! R:/127.0.0.1:8808] READ COMPLETE
+2020-11-03 17:16:15,961 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9, L:/127.0.0.1:2084 ! R:/127.0.0.1:8808] INACTIVE
+2020-11-03 17:16:15,961 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0xf39912d9, L:/127.0.0.1:2084 ! R:/127.0.0.1:8808] UNREGISTERED
+2020-11-03 17:16:15,962 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-3-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.util.IllegalReferenceCountException: refCnt: 0, decrement: 1
+	at io.netty.util.internal.ReferenceCountUpdater.toLiveRealRefCnt(ReferenceCountUpdater.java:74)
+	at io.netty.util.internal.ReferenceCountUpdater.release(ReferenceCountUpdater.java:138)
+	at io.netty.buffer.AbstractReferenceCountedByteBuf.release(AbstractReferenceCountedByteBuf.java:100)
+	at io.netty.handler.codec.http.HttpObjectAggregator$AggregatedFullHttpMessage.release(HttpObjectAggregator.java:379)
+	at io.netty.util.ReferenceCountUtil.release(ReferenceCountUtil.java:88)
+	at io.github.kimmking.gateway.inbound.HttpInboundHandler.channelRead(HttpInboundHandler.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:295)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 17:18:13,773 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'TCP_NODELAY' for channel '[id: 0xa279ebb6]'
+2020-11-03 17:18:13,775 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'io.netty.channel.unix.UnixChannelOption#SO_REUSEPORT' for channel '[id: 0xa279ebb6]'
+2020-11-03 17:18:13,776 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_SNDBUF' for channel '[id: 0xa279ebb6]'
+2020-11-03 17:18:13,776 [WARN ] (io.netty.bootstrap.ServerBootstrap.main): Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xa279ebb6]'
+2020-11-03 17:18:13,787 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xa279ebb6] REGISTERED
+2020-11-03 17:18:13,788 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xa279ebb6] BIND: 0.0.0.0/0.0.0.0:8888
+2020-11-03 17:18:13,789 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xa279ebb6, L:/0:0:0:0:0:0:0:0:8888] ACTIVE
+2020-11-03 17:18:16,185 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xa279ebb6, L:/0:0:0:0:0:0:0:0:8888] READ: [id: 0xcbfc2462, L:/0:0:0:0:0:0:0:1:8888 - R:/0:0:0:0:0:0:0:1:2170]
+2020-11-03 17:18:16,186 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-2-1): [id: 0xa279ebb6, L:/0:0:0:0:0:0:0:0:8888] READ COMPLETE
+2020-11-03 17:18:16,245 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3] REGISTERED
+2020-11-03 17:18:16,245 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3] CONNECT: /127.0.0.1:8808
+2020-11-03 17:18:16,246 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3, L:/127.0.0.1:2196 - R:/127.0.0.1:8808] ACTIVE
+2020-11-03 17:18:16,248 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3, L:/127.0.0.1:2196 - R:/127.0.0.1:8808] WRITE, HttpObjectAggregator$AggregatedFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: CompositeByteBuf(ridx: 0, widx: 0, cap: 0, components=0))
+GET /test HTTP/1.1
+Host: localhost:8888
+User-Agent: curl/7.55.1
+Accept: */*
+content-length: 0
+nio: sakila, 0B
+2020-11-03 17:18:16,250 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3, L:/127.0.0.1:2196 - R:/127.0.0.1:8808] FLUSH
+2020-11-03 17:18:16,255 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3, L:/127.0.0.1:2196 - R:/127.0.0.1:8808] CLOSE
+2020-11-03 17:18:16,256 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3, L:/127.0.0.1:2196 ! R:/127.0.0.1:8808] READ COMPLETE
+2020-11-03 17:18:16,256 [WARN ] (io.netty.channel.DefaultChannelPipeline.nioEventLoopGroup-3-1): An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.util.IllegalReferenceCountException: refCnt: 0, decrement: 1
+	at io.netty.util.internal.ReferenceCountUpdater.toLiveRealRefCnt(ReferenceCountUpdater.java:74)
+	at io.netty.util.internal.ReferenceCountUpdater.release(ReferenceCountUpdater.java:138)
+	at io.netty.buffer.AbstractReferenceCountedByteBuf.release(AbstractReferenceCountedByteBuf.java:100)
+	at io.netty.handler.codec.http.HttpObjectAggregator$AggregatedFullHttpMessage.release(HttpObjectAggregator.java:379)
+	at io.netty.util.ReferenceCountUtil.release(ReferenceCountUtil.java:88)
+	at io.github.kimmking.gateway.inbound.HttpInboundHandler.channelRead(HttpInboundHandler.java:53)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:321)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:295)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:377)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:363)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 17:18:16,257 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3, L:/127.0.0.1:2196 ! R:/127.0.0.1:8808] INACTIVE
+2020-11-03 17:18:16,258 [INFO ] (io.netty.handler.logging.LoggingHandler.nioEventLoopGroup-4-1): [id: 0x26346cd3, L:/127.0.0.1:2196 ! R:/127.0.0.1:8808] UNREGISTERED

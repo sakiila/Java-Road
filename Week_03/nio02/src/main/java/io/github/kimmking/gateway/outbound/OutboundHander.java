@@ -7,23 +7,23 @@ import io.netty.handler.codec.http.FullHttpRequest;
 
 import java.util.List;
 
-public abstract class OutboundHander implements HttpRequestFilter, HttpEndpointRouter {
+public interface OutboundHander extends HttpRequestFilter, HttpEndpointRouter {
 
-    public void handle(final FullHttpRequest fullRequest, final ChannelHandlerContext ctx) {
+    default void handle(final ChannelHandlerContext ctx, final FullHttpRequest fullRequest) {
         return;
     }
 
     @Override
-    public void filter(FullHttpRequest fullRequest, ChannelHandlerContext ctx) {
+    default void filter(ChannelHandlerContext ctx, FullHttpRequest fullRequest) {
         return;
     }
 
     @Override
-    public String route(List<String> endpoints) {
+    default String route(List<String> endpoints) {
         return route(endpoints, LoadBalance.RANDOM);
     }
 
-    public String route(List<String> endpoints, LoadBalance loadBalance) {
+    default String route(List<String> endpoints, LoadBalance loadBalance) {
         return "";
     }
 
