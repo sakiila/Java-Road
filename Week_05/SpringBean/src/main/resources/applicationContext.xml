@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 配置文件方式 -->
-    <bean id="student" class="me.bob.xml.Student">
+    <bean id="studentProperties" class="me.bob.xml.Student">
         <constructor-arg name="id" value="01"/>
         <constructor-arg name="name" value="Bob01"/>
     </bean>
