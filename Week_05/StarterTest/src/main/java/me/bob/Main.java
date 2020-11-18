@@ -1,11 +1,21 @@
 package me.bob;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@EnableAutoConfiguration
-public class Main {
+@SpringBootApplication
+public class Main implements CommandLineRunner {
+
+    @Autowired
+    private StudentService studentService;
+
     public static void main(String[] args) {
-        SpringApplication.run(Main.class);
+        SpringApplication.run(Main.class, args);
+    }
+
+    public void run(String... args) throws Exception {
+        System.out.println("studentService.toString() = " + studentService.toString());
     }
 }
