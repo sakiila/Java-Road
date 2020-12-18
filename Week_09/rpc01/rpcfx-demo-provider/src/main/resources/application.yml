@@ -1,0 +1,6 @@
+server:
+  port: 12345
+  
+  profiles:
+    active: true
+
