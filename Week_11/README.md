@@ -2,7 +2,7 @@
 
 ### 本周作业
 
-第 21 课作业
+第 22 课作业
 1. （选做）命令行下练习操作Redis的各种基本数据结构和命令。
 2. （选做）分别基于jedis，RedisTemplate，Lettuce，Redission实现redis基本操作 的demo，可以使用spring-boot集成上述工具。
 3. （选做）spring集成练习:

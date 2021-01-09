@@ -2,7 +2,7 @@
 
 ### 本周作业
 
-第 22 课作业
+第 23 课作业
 1. （必做）配置redis的主从复制，sentinel高可用，Cluster集群。
    提交如下内容到github：
    1）config配置文件，
