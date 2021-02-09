@@ -1,0 +1,5 @@
+# 给前面课程提供的Student/Klass/School实现自动配置和Starter。
+me:
+  bob:
+    id: 3
+    name: Bob

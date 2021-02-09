@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置文件方式 -->
+    <bean id="studentProperties" class="me.bob.xml.Student">
+        <constructor-arg name="id" value="01"/>
+        <constructor-arg name="name" value="Bob01"/>
+    </bean>
+
+</beans>
